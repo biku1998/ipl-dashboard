@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend API for ipl dashboard full stack application",
+  "main": "build/server.js",
+  "scripts": {
+    "dev": "nodemon build/server.js",
+    "prestart": "tsc",
+    "start": "node build/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.13"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.10",
+    "@types/express": "^4.17.12",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^15.12.2",
+    "nodemon": "^2.0.7",
+    "typescript": "^4.3.2"
+  }
+}
