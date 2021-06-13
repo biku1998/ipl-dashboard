@@ -393,24 +393,11 @@ id,city,date,player_of_match,venue,team1,team2,toss_winner,toss_decision,winner,
 598072,Kolkata,2013-05-24,Harbhajan Singh,Eden Gardens,Mumbai Indians,Rajasthan Royals,Rajasthan Royals,bat,Mumbai Indians,wickets,4.0,C Shamshuddin,SJA Taufel
 598073,Kolkata,2013-05-26,KA Pollard,Eden Gardens,Chennai Super Kings,Mumbai Indians,Mumbai Indians,bat,Mumbai Indians,runs,23.0,HDPK Dharmasena,SJA Taufel
 729279,Abu Dhabi,2014-04-16,JH Kallis,Sheikh Zayed Stadium,Mumbai Indians,Kolkata Knight Riders,Kolkata Knight Riders,bat,Kolkata Knight Riders,runs,41.0,M Erasmus,RK Illingworth
-729281,nan,2014-04-17,YS Chahal,Sharjah Cricket Stadium,Delhi Capitals,Royal Challengers Bangalore,Royal Challengers Bangalore,field,Royal Challengers Bangalore,wickets,8.0,Aleem Dar,S Ravi
 729283,Abu Dhabi,2014-04-18,GJ Maxwell,Sheikh Zayed Stadium,Chennai Super Kings,Kings XI Punjab,Chennai Super Kings,bat,Kings XI Punjab,wickets,6.0,RK Illingworth,C Shamshuddin
 729285,Abu Dhabi,2014-04-18,AM Rahane,Sheikh Zayed Stadium,Sunrisers Hyderabad,Rajasthan Royals,Rajasthan Royals,field,Rajasthan Royals,wickets,4.0,BF Bowden,RK Illingworth
-729287,nan,2014-04-19,PA Patel,Dubai International Cricket Stadium,Royal Challengers Bangalore,Mumbai Indians,Royal Challengers Bangalore,field,Royal Challengers Bangalore,wickets,7.0,Aleem Dar,AK Chaudhary
-729289,nan,2014-04-19,JP Duminy,Dubai International Cricket Stadium,Kolkata Knight Riders,Delhi Capitals,Kolkata Knight Riders,bat,Delhi Capitals,wickets,4.0,Aleem Dar,VA Kulkarni
-729291,nan,2014-04-20,GJ Maxwell,Sharjah Cricket Stadium,Rajasthan Royals,Kings XI Punjab,Kings XI Punjab,field,Kings XI Punjab,wickets,7.0,BF Bowden,M Erasmus
 729293,Abu Dhabi,2014-04-21,SK Raina,Sheikh Zayed Stadium,Chennai Super Kings,Delhi Capitals,Chennai Super Kings,bat,Chennai Super Kings,runs,93.0,RK Illingworth,C Shamshuddin
-729295,nan,2014-04-22,GJ Maxwell,Sharjah Cricket Stadium,Kings XI Punjab,Sunrisers Hyderabad,Sunrisers Hyderabad,field,Kings XI Punjab,runs,72.0,M Erasmus,S Ravi
-729297,nan,2014-04-23,RA Jadeja,Dubai International Cricket Stadium,Rajasthan Royals,Chennai Super Kings,Rajasthan Royals,field,Chennai Super Kings,runs,7.0,HDPK Dharmasena,RK Illingworth
-729299,nan,2014-04-24,CA Lynn,Sharjah Cricket Stadium,Royal Challengers Bangalore,Kolkata Knight Riders,Royal Challengers Bangalore,field,Kolkata Knight Riders,runs,2.0,Aleem Dar,VA Kulkarni
-729301,nan,2014-04-25,AJ Finch,Dubai International Cricket Stadium,Sunrisers Hyderabad,Delhi Capitals,Sunrisers Hyderabad,bat,Sunrisers Hyderabad,runs,4.0,M Erasmus,S Ravi
-729303,nan,2014-04-25,MM Sharma,Dubai International Cricket Stadium,Chennai Super Kings,Mumbai Indians,Mumbai Indians,bat,Chennai Super Kings,wickets,7.0,BF Bowden,M Erasmus
 729305,Abu Dhabi,2014-04-26,PV Tambe,Sheikh Zayed Stadium,Rajasthan Royals,Royal Challengers Bangalore,Rajasthan Royals,field,Rajasthan Royals,wickets,6.0,HDPK Dharmasena,C Shamshuddin
 729307,Abu Dhabi,2014-04-26,Sandeep Sharma,Sheikh Zayed Stadium,Kolkata Knight Riders,Kings XI Punjab,Kolkata Knight Riders,field,Kings XI Punjab,runs,23.0,HDPK Dharmasena,RK Illingworth
-729309,nan,2014-04-27,M Vijay,Sharjah Cricket Stadium,Delhi Capitals,Mumbai Indians,Mumbai Indians,bat,Delhi Capitals,wickets,6.0,Aleem Dar,VA Kulkarni
-729311,nan,2014-04-27,DR Smith,Sharjah Cricket Stadium,Sunrisers Hyderabad,Chennai Super Kings,Sunrisers Hyderabad,bat,Chennai Super Kings,wickets,5.0,AK Chaudhary,VA Kulkarni
-729313,nan,2014-04-28,Sandeep Sharma,Dubai International Cricket Stadium,Kings XI Punjab,Royal Challengers Bangalore,Kings XI Punjab,field,Kings XI Punjab,wickets,5.0,BF Bowden,S Ravi
-729317,nan,2014-04-30,B Kumar,Dubai International Cricket Stadium,Mumbai Indians,Sunrisers Hyderabad,Mumbai Indians,field,Sunrisers Hyderabad,runs,15.0,HDPK Dharmasena,M Erasmus
 733971,Ranchi,2014-05-02,RA Jadeja,JSCA International Stadium Complex,Chennai Super Kings,Kolkata Knight Riders,Chennai Super Kings,bat,Chennai Super Kings,runs,34.0,AK Chaudhary,NJ Llong
 733973,Mumbai,2014-05-03,CJ Anderson,Wankhede Stadium,Mumbai Indians,Kings XI Punjab,Kings XI Punjab,bat,Mumbai Indians,wickets,5.0,BNJ Oxenford,C Shamshuddin
 733975,Delhi,2014-05-03,KK Nair,Feroz Shah Kotla,Delhi Capitals,Rajasthan Royals,Rajasthan Royals,field,Rajasthan Royals,wickets,7.0,SS Hazare,S Ravi
