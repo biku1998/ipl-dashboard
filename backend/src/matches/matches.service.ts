@@ -11,3 +11,16 @@ export const findAll = async (): Promise<Match[]> => {
   const matches = await MatchModel.find();
   return matches;
 };
+
+export const findTeamMatches = async (
+  teamName: string,
+  limit = 5
+): Promise<Match[] | null> => {
+  const matches = await MatchModel.find({
+    $or: [{ team1: teamName }, { team2: teamName }],
+  })
+    .sort({ date: -1 })
+    .limit(limit)
+    .exec();
+  return matches;
+};

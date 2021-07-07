@@ -14,7 +14,7 @@ const matchSchema = new Schema<Match>(
       trim: true,
     },
     date: {
-      type: String,
+      type: Date,
       required: true,
       trim: true,
     },
