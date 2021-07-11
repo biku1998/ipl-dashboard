@@ -1,29 +1,25 @@
-import express, { Request, Response } from "express";
+import express from "express";
 import * as MatchService from "./matches.service";
-import { getFormattedError } from "../utils/error";
 
 export const matchesRouter = express.Router();
 
-matchesRouter.get("/", async (req: Request, resp: Response) => {
+matchesRouter.get("/", async (req, resp, next) => {
   try {
-    const matches = await MatchService.findAll();
+    const team: string = (req.query.team as string) || "";
+    const offset: number = parseInt(req.query.offset as string) || 0;
+    const limit: number = parseInt(req.query.limit as string) || 10;
+    const matches = await MatchService.find(team, offset, limit);
     resp.send({ matches });
   } catch (err) {
-    resp
-      .status(500)
-      .send(
-        getFormattedError([err.message, "failed to get all the matches detail"])
-      );
+    next(err);
   }
 });
 
-matchesRouter.post("/", async (req: Request, resp: Response) => {
+matchesRouter.post("/", async (req, resp, next) => {
   try {
     const match = await MatchService.create(req.body);
     resp.status(201).send({ match });
   } catch (err) {
-    resp
-      .status(500)
-      .send(getFormattedError([err.message, "failed to create new match"]));
+    next(err);
   }
 });

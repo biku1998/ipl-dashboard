@@ -1,5 +1,4 @@
 export interface Match {
-  id: number;
   city: string;
   date: string;
   player_of_match: string;

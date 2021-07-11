@@ -3,11 +3,6 @@ import { Schema, model } from "mongoose";
 
 const matchSchema = new Schema<Match>(
   {
-    id: {
-      type: Number,
-      required: true,
-      unique: true,
-    },
     city: {
       type: String,
       required: true,

@@ -9,13 +9,9 @@ const teamSchema = new Schema<Team>(
       trim: true,
       unique: true,
     },
-    total_matches: {
-      type: Number,
-      required: true,
-    },
-    total_wins: {
-      type: Number,
-      required: true,
+    logo: {
+      type: String,
+      trim: true,
     },
   },
   {

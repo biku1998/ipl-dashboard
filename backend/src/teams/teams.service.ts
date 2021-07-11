@@ -7,24 +7,17 @@ export const create = async (payload: Team): Promise<Team> => {
   return team;
 };
 
-export const findAll = async (fields: string[] | null): Promise<Team[]> => {
-  let teams: Team[];
-  if (fields) {
-    let fieldsFilter: {
-      [key: string]: number;
-    } = { _id: 0 };
-    fields.forEach((fName) => (fieldsFilter[fName] = 1));
-    teams = await TeamModel.find({}).select(fieldsFilter);
-  } else {
-    teams = await TeamModel.find();
-  }
-  return teams;
-};
+export const findAll = async (
+  fields: string[] = [],
+  name: string = ""
+): Promise<Team[]> => {
+  const filter: { [key: string]: number } = { _id: 0 };
 
-export const find = async (teamName: string): Promise<Team | null> => {
-  const teams = await TeamModel.find({ name: teamName });
-  if (teams.length !== 0) {
-    return teams[0];
-  }
-  return null;
+  fields.forEach((f) => (filter[f] = 1));
+
+  const teams: Team[] = await TeamModel.find({
+    name: new RegExp("^" + name),
+  }).select(filter);
+
+  return teams;
 };
