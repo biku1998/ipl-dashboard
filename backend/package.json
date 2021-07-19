@@ -4,16 +4,16 @@
   "description": "backend API for ipl dashboard full stack application",
   "main": "build/server.js",
   "scripts": {
-    "dev": "env-cmd -f ./configs/dev.env nodemon build/server.js",
+    "dev": "NODE_ENV=dev nodemon build/server.js",
     "prestart": "tsc",
-    "start": "node build/server.js"
+    "start": "NODE_ENV=prod node build/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "env-cmd": "^10.1.0",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mongoose": "^5.12.13"
   },

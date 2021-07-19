@@ -1,3 +1,15 @@
+// Setups for bootstrapping the app with
+// correct env variables
+
+// because our .env lives outside the build folder
+const PATH = __dirname.replace("/build", "");
+const DOTENV_PATH =
+  process.env.NODE_ENV === "dev"
+    ? PATH + "/configs/dev.env"
+    : PATH + "/configs/prod.env";
+
+require("dotenv").config({ path: DOTENV_PATH });
+
 import express from "express";
 import cors from "cors";
 import { teamsRouter } from "./teams/teams.router";

@@ -5,12 +5,25 @@ export const matchesRouter = express.Router();
 
 matchesRouter.get("/", async (req, resp, next) => {
   try {
-    const team: string = (req.query.team as string) || "";
-    const offset: number = parseInt(req.query.offset as string) || 0;
-    const limit: number = parseInt(req.query.limit as string) || 10;
-    const matches = await MatchService.find(team, offset, limit);
+    const team: string = req.query.team as string;
+    const offset: number = parseInt(req.query.offset as string);
+    const limit: number = parseInt(req.query.limit as string);
+    const opponent: string = req.query.opponent as string;
+    const years: string[] = req.query.years
+      ? (req.query.years as string).split(",")
+      : [];
+
+    const matches = await MatchService.find(
+      team,
+      offset,
+      limit,
+      opponent,
+      years
+    );
+
     resp.send({ matches });
   } catch (err) {
+    console.log(err);
     next(err);
   }
 });
