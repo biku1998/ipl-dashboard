@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "NODE_ENV=dev nodemon build/server.js",
     "prestart": "tsc",
-    "start": "NODE_ENV=prod node build/server.js"
+    "start": "NODE_ENV=production node build/server.js"
   },
   "keywords": [],
   "author": "",

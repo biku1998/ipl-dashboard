@@ -34,19 +34,13 @@ Creating a fullstack application using ipl matches data which is available [here
 
 > **Note** You can use the same or just apply the same concepts in your preferred stack
 
-## Data cleanup and loading
+## Data cleanup
 
 For cleanup look at
 
 ```
 /data/data_exploration_cleanup.ipynb
 /data/matches.csv
-```
-
-For loading look at
-
-```
-/data/data_loader.ipynb
 ```
 
 ## Backend
@@ -64,3 +58,26 @@ Have a look at
 ```
 /frontend
 ```
+
+## Run the project locally
+
+### With docker
+
+> Create api and database container
+
+```
+cd backend
+
+docker-compose up -d
+```
+
+> load the data in the database
+
+**Note** : You need to have `python` `pandas` `requests` installed
+
+```
+cd data
+python load.py
+```
+
+That's it. Backend API will be running at `http://localhost:4000`

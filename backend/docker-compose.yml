@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  backend:
+    container_name: "backend-api"
+    restart: "always"
+    build: .
+    ports:
+      - "4000:4000"
+    depends_on:
+      - "mongo"
+
+  mongo:
+    container_name: "mongo"
+    image: mongo
+    restart: "always"
+    ports:
+      - "27017:27017"
