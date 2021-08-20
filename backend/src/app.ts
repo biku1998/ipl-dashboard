@@ -1,14 +1,10 @@
-// Setups for bootstrapping the app with
-// correct env variables
+// load the environment variable according to NODE_ENV
 
-// because our .env lives outside the build folder
-const PATH = __dirname.replace("/build", "");
-const DOTENV_PATH =
-  process.env.NODE_ENV === "dev"
-    ? PATH + "/configs/dev.env"
-    : PATH + "/configs/prod.env";
+const DOT_ENV_PATH = process.env.NODE_ENV === "test" ? "/.env.test" : "/.env";
 
-require("dotenv").config({ path: DOTENV_PATH });
+require("dotenv").config({
+  path: __dirname.replace("/build", "") + DOT_ENV_PATH,
+});
 
 import express from "express";
 import cors from "cors";
@@ -21,6 +17,9 @@ import { matchEventHandler } from "./events/listeners/topics/match";
 
 // init db
 require("./db/mongoose");
+
+// load the data in the database
+require("./scripts/load");
 
 const app = express();
 app.use(express.json());

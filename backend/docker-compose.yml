@@ -2,10 +2,11 @@ version: "3.9"
 services:
   backend:
     container_name: "backend-api"
+    image: "biku1998/ipl-dashboard-backend-api"
     restart: "always"
     build: .
     ports:
-      - "4000:4000"
+      - "3000:3000"
     depends_on:
       - "mongo"
 
