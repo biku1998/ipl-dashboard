@@ -1,0 +1,387 @@
+{
+	"info": {
+		"_postman_id": "00738c63-8896-4818-9c5e-6559860711e9",
+		"name": "ipl-dashboard",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "teams",
+			"item": [
+				{
+					"name": "Get all teams",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/teams?name=De&fields=name,updatedAt",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"teams"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "De",
+									"description": "filter by partial or full team name"
+								},
+								{
+									"key": "fields",
+									"value": "name,updatedAt",
+									"description": "filter the attributes we want from `[name, createdAt, updatedAt]`"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "sample resp",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/teams?name=De&fields=name,updatedAt",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"teams"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "De",
+											"description": "filter by partial or full team name"
+										},
+										{
+											"key": "fields",
+											"value": "name,updatedAt",
+											"description": "filter the attributes we want from `[name, createdAt, updatedAt]`"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4c-cLc9GUtbXlfc96NJ5UL8IRmmqz4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Jul 2021 07:36:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"teams\": [\n        {\n            \"name\": \"Delhi Capitals\",\n            \"updatedAt\": \"2021-07-11T18:59:22.733Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create new team",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/teams",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"teams"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "records",
+			"item": [
+				{
+					"name": "Get team records",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/records/:teamName",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"records",
+								":teamName"
+							],
+							"variable": [
+								{
+									"key": "teamName",
+									"value": "Delhi Capitals"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "sample resp",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/records/:teamName",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"records",
+										":teamName"
+									],
+									"variable": [
+										{
+											"key": "teamName",
+											"value": "Delhi Capitals"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "181"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b5-0UfSlbbpmmN1CJ5x+jwT/vXm5+g\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Jul 2021 07:42:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"record\": {\n        \"_id\": \"60eb3f8572afda0a383bf6d9\",\n        \"teamName\": \"Delhi Capitals\",\n        \"total\": 185,\n        \"wins\": 82,\n        \"createdAt\": \"2021-07-11T18:59:17.413Z\",\n        \"updatedAt\": \"2021-07-11T18:59:22.481Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "matches",
+			"item": [
+				{
+					"name": "Get all matches",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/matches?team=Delhi Capitals&offset=0&limit=1&opponent=Sun&years=2018,2019,2020",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"matches"
+							],
+							"query": [
+								{
+									"key": "team",
+									"value": "Delhi Capitals",
+									"description": "team name `required`"
+								},
+								{
+									"key": "offset",
+									"value": "0",
+									"description": "offset value or start index `optional | default : 0`"
+								},
+								{
+									"key": "limit",
+									"value": "1",
+									"description": "no of records to get `optional | default : 10` "
+								},
+								{
+									"key": "opponent",
+									"value": "Sun",
+									"description": "partial or extact opponent team name `optional`"
+								},
+								{
+									"key": "years",
+									"value": "2018,2019,2020",
+									"description": "match years `optional`"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "sample resp",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/matches?team=Delhi Capitals&offset=10&limit=5&opponent=Sun",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"matches"
+									],
+									"query": [
+										{
+											"key": "team",
+											"value": "Delhi Capitals",
+											"description": "team name `required`"
+										},
+										{
+											"key": "offset",
+											"value": "10",
+											"description": "offset value or start index `optional | default : 0`"
+										},
+										{
+											"key": "limit",
+											"value": "5",
+											"description": "no of records to get `optional | default : 10` "
+										},
+										{
+											"key": "opponent",
+											"value": "Sun",
+											"description": "partial or extact opponent team name `optional`"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1738"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"6ca-pSZYkUoex+U9LARg9v5rE6r/JgU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Jul 2021 08:05:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"matches\": [\n        {\n            \"_id\": \"60eb3f8672afda0a383bf83e\",\n            \"city\": \"Delhi\",\n            \"date\": \"2011-04-19T00:00:00.000Z\",\n            \"player_of_match\": \"S Sohal\",\n            \"venue\": \"Feroz Shah Kotla\",\n            \"team1\": \"Delhi Capitals\",\n            \"team2\": \"Sunrisers Hyderabad\",\n            \"toss_winner\": \"Sunrisers Hyderabad\",\n            \"winner\": \"Sunrisers Hyderabad\",\n            \"result\": \"runs\",\n            \"result_margin\": 16,\n            \"umpire1\": \"PR Reiffel\",\n            \"umpire2\": \"RJ Tucker\",\n            \"createdAt\": \"2021-07-11T18:59:18.694Z\",\n            \"updatedAt\": \"2021-07-11T18:59:18.694Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"60eb3f8672afda0a383bf80c\",\n            \"city\": \"Delhi\",\n            \"date\": \"2010-04-18T00:00:00.000Z\",\n            \"player_of_match\": \"A Symonds\",\n            \"venue\": \"Feroz Shah Kotla\",\n            \"team1\": \"Delhi Capitals\",\n            \"team2\": \"Sunrisers Hyderabad\",\n            \"toss_winner\": \"Sunrisers Hyderabad\",\n            \"winner\": \"Sunrisers Hyderabad\",\n            \"result\": \"runs\",\n            \"result_margin\": 11,\n            \"umpire1\": \"BR Doctrove\",\n            \"umpire2\": \"SK Tarapore\",\n            \"createdAt\": \"2021-07-11T18:59:18.548Z\",\n            \"updatedAt\": \"2021-07-11T18:59:18.548Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"60eb3f8672afda0a383bf79c\",\n            \"city\": \"Centurion\",\n            \"date\": \"2009-05-22T00:00:00.000Z\",\n            \"player_of_match\": \"AC Gilchrist\",\n            \"venue\": \"SuperSport Park\",\n            \"team1\": \"Delhi Capitals\",\n            \"team2\": \"Sunrisers Hyderabad\",\n            \"toss_winner\": \"Sunrisers Hyderabad\",\n            \"winner\": \"Sunrisers Hyderabad\",\n            \"result\": \"wickets\",\n            \"result_margin\": 6,\n            \"umpire1\": \"BR Doctrove\",\n            \"umpire2\": \"DJ Harper\",\n            \"createdAt\": \"2021-07-11T18:59:18.137Z\",\n            \"updatedAt\": \"2021-07-11T18:59:18.137Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"60eb3f8572afda0a383bf70a\",\n            \"city\": \"Delhi\",\n            \"date\": \"2008-05-15T00:00:00.000Z\",\n            \"player_of_match\": \"A Mishra\",\n            \"venue\": \"Feroz Shah Kotla\",\n            \"team1\": \"Delhi Capitals\",\n            \"team2\": \"Sunrisers Hyderabad\",\n            \"toss_winner\": \"Sunrisers Hyderabad\",\n            \"winner\": \"Delhi Capitals\",\n            \"result\": \"runs\",\n            \"result_margin\": 12,\n            \"umpire1\": \"BG Jerling\",\n            \"umpire2\": \"GA Pratapkumar\",\n            \"createdAt\": \"2021-07-11T18:59:17.613Z\",\n            \"updatedAt\": \"2021-07-11T18:59:17.613Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create new match",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/matches",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"matches"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "status check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}",
+					"host": [
+						"{{URL}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
