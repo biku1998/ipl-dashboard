@@ -32,3 +32,5 @@
 - resultMargin
 - umpire1
 - umpire 2
+
+### download the postman export json to view the docs
